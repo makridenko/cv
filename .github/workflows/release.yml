@@ -15,7 +15,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
-          working_directory: src/main.tex
+          working_directory: src/
 
       - name: Create Release
         id: create_release
