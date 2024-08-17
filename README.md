@@ -1,6 +1,8 @@
 # CV
 
-My CV, which I wrote in LaTeX.
+My CV, written in LaTeX.
+
+Check out [last version](https://github.com/makridenko/cv/releases).
 
 ## Requirements
 You need to install [texlive](https://wiki.archlinux.org/title/TeX_Live).
