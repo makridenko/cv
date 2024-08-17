@@ -1,0 +1,95 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[left=5mm,right=5mm,top=5mm,bottom=5mm]{geometry}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+% Switch off page numbering
+\pagenumbering{gobble}
+
+% No indent
+\setlength\parindent{0pt}
+
+\titleformat{\section}
+{\normalsize\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titlespacing{\section}
+% Left margin
+{0em}
+% Space between
+{1em}
+% Space after
+{1em}
+
+\titleformat{\subsection}
+{\bfseries}
+{}
+{0em}
+{}
+
+\titleformat{\subsubsection}
+{}
+{}
+{0em}
+{}
+
+\renewcommand{\maketitle}{
+    {\Large\bfseries\theauthor}
+    \vspace{.35em}
+
+    {\bfseries\thetitle}
+
+    \vspace{.25em}
+
+    \underline{alexey.makridenko@gmail.com} {\scriptsize$\bullet$}
+    +79166845869 {\scriptsize$\bullet$}
+    \href{https://www.linkedin.com/in/makridenko/}{\underline{LinkedIn}} {\scriptsize$\bullet$}
+    Pattaya, Chon Buri, Thailand
+}
+
+
+\newenvironment{experienceEntry}[5]{
+    \par
+    \textbf{#1}, #2 \hfill #3
+    \par
+
+    \vspace{0.1em}
+    \textbf{\footnotesize{#4}} % Role
+    \vspace{0.3em}
+    \newline
+    #5 % Description
+}{ }
+
+\newenvironment{educationEntry}[2]{
+    \par
+    #1 \hfill #2
+    \par
+}
+
+
+% Itemize settings
+\renewcommand{\labelitemi}{\tiny$\bullet$}
+\setlist{itemsep=-0.1em, rightmargin=0em, leftmargin=1em, topsep=0em}
+
+\begin{document}
+
+\author{Alexey Makridenko}
+\title{Python Backend Developer}
+\maketitle
+
+\input{src/summary.tex}
+\input{src/experience/main.tex}
+\input{src/education.tex}
+\input{src/skills.tex}
+\input{src/languages.tex}
+
+\end{document}
