@@ -19,7 +19,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/action-gh-release@v2
+        uses: softprops/action-gh-release@v2
         with:
           files: main.pdf
 
