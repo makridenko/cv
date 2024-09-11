@@ -14,12 +14,12 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex
+          root_file: alexey_makridenko_python_developer_cv.tex
           working_directory: src/
 
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
-          files: src/main.pdf
+          files: src/alexey_makridenko_python_developer_cv.pdf
 
